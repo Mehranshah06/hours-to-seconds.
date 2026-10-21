@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+   
+
+
+<div class="box">
+  <h2>Hours to Seconds</h2>
+  <input type="number" id="hours" placeholder="Enter a hours">
+  <button onclick="convert()">Convert</button>
+  <div id="result"></div>
+</div> 
+
+<script>
+function convert(){
+  let hours = document.getElementById("hours").value;
+
+  if(hours === "" || hours < 0){
+    document.getElementById("result").innerHTML = "enter a hours:";
+    return;
+  }
+  
+  let seconds = hours * 3600;
+  document.getElementById("result").innerHTML = 
+    hours + " Hours = " + seconds + " Seconds";
+} 
+
+</script>
+
+</body>
+</html>
